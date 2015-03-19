@@ -1,6 +1,9 @@
 %h1= @recipe.title
 %p= @recipe.description
 = image_tag @recipe.image.url(:medium, class: "recipe_image")
+%p
+	Submitted by
+	= @recipe.user.email
 
 %h2 Ingredient Lists
 %ul
